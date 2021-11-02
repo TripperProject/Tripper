@@ -19,7 +19,7 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.tripper"))//scan 부분
+                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -31,4 +31,5 @@ public class SwaggerConfiguration {
                 .version("1.0.0")
                 .build();
     }
+
 }

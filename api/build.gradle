@@ -2,16 +2,19 @@ plugins {
     id 'java'
 }
 
-group 'com.tripper'
-version '0.0.1-SNAPSHOT'
-
-repositories {
-    mavenCentral()
+war {
+    enabled = true
 }
 
+bootWar {
+    enabled = false
+}
+
+
 dependencies {
-    implementation group:'io.springfox',name:'springfox-swagger2',version: '3.0.0'
-    implementation group:'io.springfox',name:'springfox-swagger-ui',version: '3.0.0'
+    implementation( project(':core'))
+    implementation( project(':web'))
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
