@@ -36,6 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 
+/api/src/main/resources/application-oauth.properties
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,intellij,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,intellij,java
