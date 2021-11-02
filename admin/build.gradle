@@ -1,21 +1,28 @@
 plugins {
     id 'java'
 }
-
-group 'com.tripper'
-version '0.0.1-SNAPSHOT'
-
-repositories {
-    mavenCentral()
+war {
+    enabled = true
 }
 
+bootWar {
+    enabled = false
+}
+
+
+
+//group 'com.tripper'
+//version '0.0.1-SNAPSHOT'
+//
+//repositories {
+//    mavenCentral()
+//}
+
 dependencies {
-    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
-    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}

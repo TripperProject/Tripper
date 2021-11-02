@@ -1,28 +1,28 @@
 plugins {
 	id 'org.springframework.boot' version '2.5.6'
-//	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-//	id 'org.asciidoctor.convert' version '1.5.8'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'org.asciidoctor.convert' version '1.5.8'
 	id 'java'
-//	id 'war'
+	id 'war'
 }
 
-//group = 'com.tripper'
-//version = '0.0.1-SNAPSHOT'
-//sourceCompatibility = '11'
-//
-//configurations {
-//	compileOnly {
-//		extendsFrom annotationProcessor
-//	}
-//}
-//
-//repositories {
-//	mavenCentral()
-//}
-//
-//ext {
-//	set('snippetsDir', file("build/generated-snippets"))
-//}
+group = 'com.tripper'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('snippetsDir', file("build/generated-snippets"))
+}
 
 //dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -53,6 +53,7 @@ subprojects {
 	}
 
 	dependencies {
+		implementation "io.springfox:springfox-boot-starter:3.0.0"
 		implementation 'org.springframework.boot:spring-boot-starter-web'
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -64,11 +65,6 @@ subprojects {
 }
 
 
-project(':api') {
-	dependencies {
-		compileClasspath( project(':core') )
-	}
-}
 
 //test {
 //	outputs.dir snippetsDir
