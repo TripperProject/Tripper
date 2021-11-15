@@ -20,6 +20,10 @@ const routes = [
     path: "/signup",
     component: () => import("@/views/SignupPage.vue"),
   },
+  {
+    path: "*",
+    component: () => import("@/views/NotFoundPage.vue"),
+  },
 ];
 
 const router = new VueRouter({
